@@ -22,10 +22,12 @@
 /* Private defines -----------------------------------------------------------*/
 
 #define TERMINAL_USE
+#define LSM6DSL_ACC_GYRO_SM_THS             0x13
 
 /* Update SSID and PASSWORD with own Access point settings */
-#define SSID     "XXXXXX" //myself phone
-#define PASSWORD "XXXXXX"
+#define SSID     "YOUR_SSID"
+#define PASSWORD "YOUR_PASSWORD"
+
 
 uint8_t RemoteIP[] = {172, 20, 10, 3}; // cell phone ipv4 , separate
 
