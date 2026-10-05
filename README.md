@@ -82,7 +82,6 @@ LSM6DSL INT1 ↑ → PD11 (EXTI11, rising edge) → EXTI15_10_IRQHandler
 1. The ISR only sets a `volatile` flag, keeping it short. No I2C or WiFi access inside the ISR.
 2. The streaming loop checks the flag every iteration. When set, it clears the flag, reads `FUNC_SRC1` (which releases the latched INT1), and sends `EVENT`.
 3. Latched mode is used because the main loop may be blocked in `WIFI_SendData` for a while. In pulsed mode, the status bit only stays set for ~38 ms and could be missed.
-4. The latched state is cleared before the EXTI is enabled, so a leftover high level after an MCU reset cannot block future rising edges.
 
 ### Host Visualization
 
