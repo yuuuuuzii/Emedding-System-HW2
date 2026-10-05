@@ -1,8 +1,3 @@
-
-### Demo
-
-![Demo](demo2.gif)
-
 # STM32 WiFi Sensor Streaming Lab
 
 The STM32 IoT node reads the LSM6DSL accelerometer and streams the data over WiFi (TCP) to a Mac, where a Python script plots it in real time. The LSM6DSL significant motion detection is also enabled and reported to the host through a GPIO EXTI interrupt. Completes the **Basic Problem** and **Option Problem 1**.
@@ -111,3 +106,7 @@ nc -l 8002 | python3 record.py
 
 4. Press RESET on the board. After the connection opens, type `s` in the terminal to start streaming. Walk with the board to trigger a significant motion event.
 
+
+### Demo
+
+![Demo](demo2.gif)
